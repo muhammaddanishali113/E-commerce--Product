@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>project Colllection-Page</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <main class="collection">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+
+      <div class="filter-box">
+        <h3>Categories</h3>
+        <select id="categoryFilter">
+          <option value="all">All Categories</option>
+        </select>
+      </div>
+
+      <div class="filter-box">
+        <h3>Price Range</h3>
+        <label>Minimum Price</label>
+        <input type="number" id="minPrice" placeholder="Min price">
+
+        <label>Maximum Price</label>
+        <input type="number" id="maxPrice" placeholder="Max price">
+
+        <button id="applyPrice">Apply Price</button>
+      </div>
+
+      <div class="filter-box">
+        <h3>Rating</h3>
+        <select id="ratingFilter">
+          <option value="0">All Ratings</option>
+          <option value="4">★★★★☆ & Up</option>
+          <option value="3">★★★☆☆ & Up</option>
+          <option value="2">★★☆☆☆ & Up</option>
+          <option value="1">★☆☆☆☆ & Up</option>
+        </select>
+      </div>
+
+      <button id="clearFilters" class="clear-btn">
+        Clear All Filters
+      </button>
+
+    </aside>
+
+    <!-- Products Section -->
+    <section class="products-section">
+
+      <div class="products-heading">
+        <div>
+          <h2>Just For You</h2>
+          <p id="resultsCount">15 Products</p>
+        </div>
+
+        <div class="sort-area">
+          <button id="themeToggle">🌙</button>
+
+          <select id="sortSelect">
+            <option value="default">Default</option>
+            <option value="priceLow">Price Low to High</option>
+            <option value="priceHigh">Price High to Low</option>
+            <option value="ratingHigh">Rating High to Low</option>
+            <option value="name">Name A-Z</option>
+          </select>
+
+          <select id="itemsPerPage">
+            <option value="6">6 Items</option>
+            <option value="9">9 Items</option>
+            <option value="15" selected>15 Items</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="products-grid" id="productsGrid"></div>
+
+      <div class="pagination" id="pagination"></div>
+
+    </section>
+
+  </main>
+
+  <script src="app.js"></script>
+
+</body>
+
+</html>
